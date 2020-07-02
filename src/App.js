@@ -39,7 +39,7 @@ class App extends React.Component {
   };
 
   getCurrentWeatherData = (lat, lon) => {
-    const weatherApi = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=b1b35bba8b434a28a0be2a3e1071ae5b&units=imperial`;
+    const weatherApi = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=b1b35bba8b434a28a0be2a3e1071ae5b&units=imperial`;
 
     fetch(weatherApi, { signal: this.controllerSignal })
       .then((response) => response.json())
